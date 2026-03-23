@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #5BBD8C;
+  --color-primary-light: #7BC8A4;
+  --color-accent: #E8734A;
+  --color-yellow: #F0B828;
+  --color-bg: #F5F0E8;
+  --color-text: #3D3D3D;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @reference "tailwindcss";
+    background-color: #5BBD8C;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    display: inline-block;
+    text-align: center;
+  }
+  .btn-primary:hover { background-color: #4da87a; }
+
+  .btn-accent {
+    background-color: #E8734A;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    display: inline-block;
+    text-align: center;
+  }
+  .btn-accent:hover { background-color: #d4633a; }
+
+  .card {
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border: 1px solid rgba(123,200,164,0.3);
+  }
+}
